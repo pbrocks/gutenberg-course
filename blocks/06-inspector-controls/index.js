@@ -16,7 +16,8 @@ const {
     RichText,
     AlignmentToolbar,
     BlockControls,
-    BlockAlignmentToolbar,
+    ColorPalette,
+    colorPaletteControl,
     InspectorControls,
 } = wp.editor;
 const {
@@ -24,6 +25,7 @@ const {
     Button,
     Tooltip,
     PanelBody,
+    PanelColor,
     PanelRow,
     FormToggle,
 } = wp.components;
@@ -92,6 +94,15 @@ export default registerBlockType(
                                 checked={ highContrast }
                                 onChange={ toggleHighContrast }
                             />
+                        <PanelColor
+                            title={ __( 'Color Panel', 'jsforwpblocks' ) }
+                            colorValue={ colorPaletteControl }
+                        >
+                            <ColorPalette
+                                value={ colorPaletteControl }
+                                onChange={ colorPaletteControl => setAttributes( { colorPaletteControl } ) }
+                            />
+                        </PanelColor>
                         </PanelRow>
                     </PanelBody>
                 </InspectorControls>,            

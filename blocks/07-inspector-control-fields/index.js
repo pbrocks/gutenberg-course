@@ -10,7 +10,7 @@ import "./style.scss";
 
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
-const { RichText } = wp.editor;
+const { RichText } = wp.blockEditor;
 
 // Note: atts changed from attributes, see below
 function getSettings(atts) {
@@ -46,7 +46,7 @@ export default registerBlockType("jsforwpblocks/inspector-control-fields", {
     "An example of how to use form fields in the Inspector element.",
     "jsforwpblocks"
   ),
-  category: "common",
+  category: "jsforwpblocks",
   icon: {
     background: "rgba(254, 243, 224, 0.52)",
     src: icon

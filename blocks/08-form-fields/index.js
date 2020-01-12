@@ -14,7 +14,7 @@ const {
 } = wp.blocks;
 const {
     RichText,
-} = wp.editor;
+} = wp.blockEditor;
 
 function getSettings(attributes) {
     let settings = [];
@@ -36,7 +36,7 @@ export default registerBlockType(
     {
         title: __('Example - Form Fields', 'jsforwpblocks'),
         description: __('An example of how to use form component in a block.', 'jsforwpblocks'),
-        category: 'common',
+        category: 'jsforwpblocks',
         icon: {
             background: 'rgba(254, 243, 224, 0.52)',
             src: icon,

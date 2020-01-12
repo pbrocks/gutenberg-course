@@ -9,18 +9,17 @@ import './style.scss';
  */
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
-const { InspectorControls } = wp.editor;
 const { TextControl, PanelBody } = wp.components;
+const { InspectorControls } = wp.blockEditor;
 
 /**
  * Register example block
  */
 export default registerBlockType(
-    'jsforwpblocks/meta-box',
-    {
+    'jsforwpblocks/meta-box', {
         title: __( 'Example - Meta Box', 'jsforwpblocks' ),
         description: __( 'An example of how to build a block with a meta box field.', 'jsforwpblocks'),
-        category: 'common',
+        category: 'jsforwpblocks',
         icon: {
             background: 'rgba(254, 243, 224, 0.52)',
             src: icon,
